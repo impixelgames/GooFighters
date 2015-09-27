@@ -5,9 +5,18 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\sPlayerMoving</sprite>
+    <sprite>sprites\sPlayerStill</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\oPlayer</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rDefault</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
