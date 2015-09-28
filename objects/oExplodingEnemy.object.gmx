@@ -31,7 +31,7 @@
 
 speed = 190 / room_speed;
 direction = random(360);
-dmg = 100;
+dmg = 105;
 </string>
           </argument>
         </arguments>

@@ -12,7 +12,9 @@
     <sprite>sprites\sEnemy</sprite>
     <sprite>sprites\sExplodingEnemyChunk</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bMain</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\FireGun.gml</script>
