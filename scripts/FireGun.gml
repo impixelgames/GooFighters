@@ -1,3 +1,8 @@
+/*
+* Fires a bullets from the given gun
+* USAGE: FireGun(oPistolBullet, aPistolAudio);
+*/
+
 var gunObject = argument0;
 //var gunAudio = argument1;
 

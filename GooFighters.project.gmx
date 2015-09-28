@@ -9,17 +9,21 @@
     <sprite>sprites\sPlayerMoving</sprite>
     <sprite>sprites\sPlayerStill</sprite>
     <sprite>sprites\sPistolBullet</sprite>
+    <sprite>sprites\sEnemy</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\FireGun.gml</script>
     <script>scripts\CheckRoomCollide.gml</script>
+    <script>scripts\EnemyBoundaryCollide.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\oPlayer</object>
     <object>objects\oGame</object>
+    <object>objects\oPlayer</object>
     <object>objects\oPistolBullet</object>
+    <object>objects\oEnemyParent</object>
+    <object>objects\oExplodingEnemy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rDefault</room>
