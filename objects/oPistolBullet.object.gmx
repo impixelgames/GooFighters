@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>// Globals
 bulletSpeed = 800 / room_speed;
+dmg = 25;
 </string>
           </argument>
         </arguments>

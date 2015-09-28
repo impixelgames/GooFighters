@@ -54,6 +54,10 @@ direction = random(360);
           <argument>
             <kind>1</kind>
             <string>image_angle = direction;
+if (image_xscale &lt; 1) {
+    image_xscale += 0.05;
+    image_yscale += 0.05;
+}
 
 // Bounding Collision
 EnemyBoundaryCollide();
@@ -65,19 +69,33 @@ if (instance_exists(incomingProjectile)) {
     // Explode into chunks
     // Define numChunks and speed here so that they are randomly generated on 
     // object creation.
-    var numChunks = random_range(15, 20);
-    var bitSpeed = 800 / room_speed;
-    
-    for (var chunk = 0; chunk &lt; numChunks; chunk++) {
-        var newChunk = instance_create(x, y, oExplodingEnemyChunk);
-        newChunk.direction = random(360);
-        newChunk.speed = random_range(bitSpeed/2, bitSpeed);
-    }
+
+    // Deal damage
+    health -= incomingProjectile.dmg;
+    image_xscale = 0.65;
+    image_yscale = image_xscale;
     
     with (incomingProjectile) {
         instance_destroy();
     }
     
+    if (health &lt; 0) {
+        var numChunks = random_range(15, 20);
+        var bitSpeed = 800 / room_speed;
+        
+        for (var chunk = 0; chunk &lt; numChunks; chunk++) {
+            var newChunk = instance_create(x, y, oExplodingEnemyChunk);
+            newChunk.direction = random(360);
+            newChunk.speed = random_range(bitSpeed/2, bitSpeed);
+        }
+    
+        var newEnemy = instance_create(random(room_width), 
+                            random(room_height), 
+                            object_index);                            
+        newEnemy.health = 100;
+        
+        instance_destroy();    
+    }
 }
 </string>
           </argument>
