@@ -33,7 +33,7 @@ window_set_fullscreen(false);
 var screenWidth = 1080;
 var screenHeight = 720;
 
-//window_set_size(screenWidth, screenHeight);
+window_set_size(screenWidth, screenHeight);
 
 // set how much of the room to view on screen
 view_wview = screenWidth;
