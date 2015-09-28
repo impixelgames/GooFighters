@@ -13,6 +13,7 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\oPlayer</object>
+    <object>objects\oGame</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rDefault</room>
