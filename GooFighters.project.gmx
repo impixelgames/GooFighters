@@ -10,6 +10,7 @@
     <sprite>sprites\sPlayerStill</sprite>
     <sprite>sprites\sPistolBullet</sprite>
     <sprite>sprites\sEnemy</sprite>
+    <sprite>sprites\sExplodingEnemyChunk</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -21,9 +22,11 @@
   <objects name="objects">
     <object>objects\oGame</object>
     <object>objects\oPlayer</object>
+    <object>objects\oPlayerProjectile</object>
     <object>objects\oPistolBullet</object>
     <object>objects\oEnemyParent</object>
     <object>objects\oExplodingEnemy</object>
+    <object>objects\oExplodingEnemyChunk</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rDefault</room>
