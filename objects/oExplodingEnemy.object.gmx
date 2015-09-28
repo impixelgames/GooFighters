@@ -31,6 +31,7 @@
 
 speed = 190 / room_speed;
 direction = random(360);
+dmg = 100;
 </string>
           </argument>
         </arguments>
@@ -81,7 +82,7 @@ if (instance_exists(incomingProjectile)) {
     
     if (health &lt; 0) {
         var numChunks = random_range(15, 20);
-        var bitSpeed = 800 / room_speed;
+        var bitSpeed = 700 / room_speed;
         
         for (var chunk = 0; chunk &lt; numChunks; chunk++) {
             var newChunk = instance_create(x, y, oExplodingEnemyChunk);

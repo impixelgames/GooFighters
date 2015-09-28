@@ -54,7 +54,7 @@ var isMoving = false;
 
 image_angle = point_direction(x, y, mouse_x, mouse_y);
 
-// Movement
+/* Movement */
 if (keyboard_check(ord("W")) || keyboard_check(ord("A")) ||
         keyboard_check(ord("S")) || keyboard_check(ord("D"))) { 
     isMoving = true; 
@@ -73,12 +73,23 @@ if (keyboard_check(ord("A"))) { x -= playerSpeed; }
 if (keyboard_check(ord("S"))) { y += playerSpeed; }
 if (keyboard_check(ord("D"))) { x += playerSpeed; }
 
-// Firing
+/* Firing */
 if (mouse_check_button_pressed(mb_left)) {
     FireGun(oPistolBullet);
 }
 
-// Collision
+/* Collisions */
+// Enemies
+var collidingEnemy = instance_place(x, y, oEnemyParent);
+if (instance_exists(collidingEnemy)) {
+    health -= collidingEnemy.dmg;
+}
+
+if (health &lt; 0) {
+    instance_destroy();
+}
+
+// Boundaries
 CheckRoomCollide();
 </string>
           </argument>
