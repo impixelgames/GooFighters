@@ -136,7 +136,7 @@ if (mouse_check_button_pressed(mb_left) &amp;&amp; canFire == true) {
     // currentGun defined at create, pistol by default. Will change with pickups
     FireGun(currentGun);
     canFire = false;
-    alarm[0] = room_speed / 4; // see alarm[0] event
+    alarm[0] = currentGun.gunSpeed; // see alarm[0] event
 }
 
 /* Collisions */
