@@ -76,6 +76,9 @@ if (instance_exists(incomingProjectile)) {
     image_xscale = 0.65;
     image_yscale = image_xscale;
     
+    // Play hitsound
+    audio_play_sound(aHitSound, 1, false);
+    
     with (incomingProjectile) {
         instance_destroy();
     }
@@ -89,7 +92,7 @@ if (instance_exists(incomingProjectile)) {
             newChunk.direction = random(360);
             newChunk.speed = random_range(bitSpeed/2, bitSpeed);
         }
-    
+        
         var newEnemy = instance_create(random(room_width), 
                             random(room_height), 
                             object_index);                            
