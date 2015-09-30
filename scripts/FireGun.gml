@@ -1,21 +1,19 @@
 /*
 * Fires a bullets from the given gun
-* USAGE: FireGun(oPistolBullet, aPistolAudio);
+* USAGE: FireGun(oPistolBullet);
 */
 
-var gunObject = argument0;
-//var gunAudio = argument1;
-
-//audio_play_sound(gunAudio, 1, false);
+var gunType = argument0;
 
 // spawn bullet
-myBullet = instance_create(x, y, gunObject);
+myBullet = instance_create(x, y, gunType);
+// play sound after spawning bullet so the sound exists (in create function)
+audio_play_sound(gunType.fireSound, 1, false);
 myBullet.direction = image_angle;
-myBullet.speed = gunObject.bulletSpeed;
+myBullet.speed = gunType.bulletSpeed;
 myBullet.image_angle = image_angle;
 
 // gun recoil/kick
-var bulletKick = 300 / room_speed;
 var kickDirection = image_angle + 180; // opposite to player dir
-x += lengthdir_x(bulletKick, kickDirection);
-y += lengthdir_y(bulletKick, kickDirection);    
+x += lengthdir_x(gunType.bulletKick, kickDirection);
+y += lengthdir_y(gunType.bulletKick, kickDirection);    

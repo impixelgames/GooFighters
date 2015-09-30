@@ -30,6 +30,11 @@
 canFire = true;
 canBeHit = true;
 health = 100;
+
+// All available guns
+guns[0] = oPistolBullet;
+// set default gun to pistol
+currentGun = guns[0];
 </string>
           </argument>
         </arguments>
@@ -128,7 +133,8 @@ if (keyboard_check(ord("D"))) { x += playerSpeed; }
 
 /* Firing */
 if (mouse_check_button_pressed(mb_left) &amp;&amp; canFire == true) {
-    FireGun(oPistolBullet);
+    // currentGun defined at create, pistol by default. Will change with pickups
+    FireGun(currentGun);
     canFire = false;
     alarm[0] = room_speed / 4; // see alarm[0] event
 }
