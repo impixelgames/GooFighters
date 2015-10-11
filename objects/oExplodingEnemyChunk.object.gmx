@@ -58,6 +58,12 @@ if (speed &lt; 0) {
     image_yscale = image_xscale;
     if (image_xscale &lt;= 0) { instance_destroy(); }    
 }
+
+// Remove if collides with player
+var collidePlayer = instance_place(x, y, oPlayer);
+if (instance_exists(collidePlayer)) {
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
