@@ -36,6 +36,7 @@
     <object>objects\oExplodingEnemyChunk</object>
     <object>objects\oShotgun</object>
     <object>objects\oPickupParent</object>
+    <object>objects\oShotgunBullet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rDefault</room>

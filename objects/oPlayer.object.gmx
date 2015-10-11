@@ -153,6 +153,15 @@ if (health &lt; 0) {
     instance_destroy();
 }
 
+// Pickups
+var pickup = instance_place(x, y, oPickupParent);
+if (instance_exists(pickup)) {
+    currentGun = pickup.gunType;
+    with pickup {
+        instance_destroy();
+    }
+}
+
 // Boundaries
 CheckRoomCollide();
 </string>
