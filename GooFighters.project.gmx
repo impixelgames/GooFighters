@@ -14,6 +14,7 @@
     <sprite>sprites\sPistolBullet</sprite>
     <sprite>sprites\sEnemy</sprite>
     <sprite>sprites\sExplodingEnemyChunk</sprite>
+    <sprite>sprites\sShotgun</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bMain</background>
@@ -33,6 +34,8 @@
     <object>objects\oEnemyParent</object>
     <object>objects\oExplodingEnemy</object>
     <object>objects\oExplodingEnemyChunk</object>
+    <object>objects\oShotgun</object>
+    <object>objects\oPickupParent</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rDefault</room>
