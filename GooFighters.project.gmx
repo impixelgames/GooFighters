@@ -17,6 +17,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bMain</background>
+    <background>background\bTileSet</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
