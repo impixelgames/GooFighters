@@ -32,9 +32,11 @@ canBeHit = true;
 health = 100;
 
 // All available guns
-guns[0] = oPistolBullet;
+//guns[0] = oPistolBullet;
 // set default gun to pistol
-currentGun = guns[0];
+//currentGun = guns[0];
+currentGun = oPistolBullet;
+lastPickUp = oShotgun;
 </string>
           </argument>
         </arguments>
@@ -137,6 +139,21 @@ if (mouse_check_button(mb_left) &amp;&amp; canFire == true) {
     FireGun(currentGun);
     canFire = false;
     alarm[0] = currentGun.gunSpeed; // see alarm[0] event
+    
+    // Change gun to pistol if out of ammo
+    if (currentGun != oPistolBullet) {
+        lastPickUp.ammo -= 1;
+        if (lastPickUp.ammo &lt;= 0) {
+            // TODO: Play out of ammo sound
+            
+            currentGun = oPistolBullet;
+            // destroy pickup
+            with lastPickUp {
+                instance_destroy();
+            }
+        }
+    }
+
 }
 
 /* Collisions */
@@ -157,9 +174,10 @@ if (health &lt; 0) {
 var pickup = instance_place(x, y, oPickupParent);
 if (instance_exists(pickup)) {
     currentGun = pickup.gunType;
-    with pickup {
-        instance_destroy();
-    }
+    lastPickUp = pickup;
+    // make pickup dissapear, but keep so that its ammo property can be used
+    pickup.image_xscale = 0;
+    pickup.image_yscale = 0;
 }
 
 // Boundaries
