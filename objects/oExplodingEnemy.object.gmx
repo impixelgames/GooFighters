@@ -98,6 +98,7 @@ if (instance_exists(incomingProjectile)) {
                             object_index);                            
         newEnemy.health = 100;
         
+        GeneratePickup(x, y);
         instance_destroy();    
     }
 }

@@ -27,6 +27,7 @@
     <script>scripts\FireGun.gml</script>
     <script>scripts\CheckRoomCollide.gml</script>
     <script>scripts\EnemyBoundaryCollide.gml</script>
+    <script>scripts\GeneratePickup.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oGame</object>
