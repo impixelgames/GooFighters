@@ -16,6 +16,7 @@
     <sprite>sprites\sExplodingEnemyChunk</sprite>
     <sprite>sprites\sShotgun</sprite>
     <sprite>sprites\sShotgunBullet</sprite>
+    <sprite>sprites\sCursor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bMain</background>

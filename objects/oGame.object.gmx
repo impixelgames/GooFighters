@@ -46,6 +46,10 @@ view_hport = screenHeight;
 // TODO: lookup
 // fit screen, match perfectly
 surface_resize(application_surface, screenWidth, screenHeight);
+
+// Set custom cursor
+window_set_cursor(cr_none);
+cursor_sprite = sCursor;
 </string>
           </argument>
         </arguments>
