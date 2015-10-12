@@ -5,7 +5,8 @@
 
 var gunType = argument0;
 
-if (gunType != oShotgunBullet) {
+// Pistol
+if (gunType == oPistolBullet) {
     // spawn bullet
     myBullet = instance_create(x, y, gunType);
     // play sound after spawning bullet so the sound exists (in create function)
@@ -13,10 +14,13 @@ if (gunType != oShotgunBullet) {
     myBullet.direction = image_angle;
     myBullet.speed = gunType.bulletSpeed;
     myBullet.image_angle = image_angle;
-} else {
+} 
+
+// Shotgun
+if (gunType == oShotgunBullet) {
     // introduce spread
-    var shotgunAngle = image_angle - 50;
-    for (var i = 0; i < 10; i++) {
+    var shotgunAngle = image_angle - 30;
+    for (var i = 0; i < 6; i++) {
         myBullet = instance_create(x, y, gunType);
         
         audio_play_sound(gunType.fireSound, 1, false);

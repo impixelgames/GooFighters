@@ -132,7 +132,7 @@ if (keyboard_check(ord("S"))) { y += playerSpeed; }
 if (keyboard_check(ord("D"))) { x += playerSpeed; }
 
 /* Firing */
-if (mouse_check_button_pressed(mb_left) &amp;&amp; canFire == true) {
+if (mouse_check_button(mb_left) &amp;&amp; canFire == true) {
     // currentGun defined at create, pistol by default. Will change with pickups
     FireGun(currentGun);
     canFire = false;
