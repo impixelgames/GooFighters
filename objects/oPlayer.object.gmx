@@ -161,6 +161,7 @@ if (mouse_check_button(mb_left) &amp;&amp; canFire == true) {
 
 var collidingEnemy = instance_place(x, y, oEnemyParent);
 if (instance_exists(collidingEnemy) &amp;&amp; canBeHit == true) {
+    audio_play_sound(aHitSound, 1, false);
     health -= collidingEnemy.dmg;
     canBeHit = false;
     alarm[1] = room_speed / 2;

@@ -28,7 +28,6 @@
             <string>/*
 * Enemy moves in a random direction, bouces off walls
 */
-
 speed = 190 / room_speed;
 direction = random(360);
 dmg = 105;
@@ -94,8 +93,8 @@ if (instance_exists(incomingProjectile)) {
         }
         
         var newEnemy = instance_create(random(room_width), 
-                            random(room_height), 
-                            object_index);                            
+                                       random(room_height), 
+                                       object_index);                            
         newEnemy.health = 100;
         
         GeneratePickup(x, y);

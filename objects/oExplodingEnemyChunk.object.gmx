@@ -56,7 +56,7 @@ if (speed &lt; 0) {
     // destroy after vanish
     image_xscale -= 1 / room_speed;
     image_yscale = image_xscale;
-    if (image_xscale &lt;= 0) { instance_destroy(); }    
+    if (image_xscale &lt;= .5) { instance_destroy(); }    
 }
 
 // Remove if collides with player
