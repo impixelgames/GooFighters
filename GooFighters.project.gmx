@@ -17,6 +17,7 @@
     <sprite>sprites\sShotgun</sprite>
     <sprite>sprites\sShotgunBullet</sprite>
     <sprite>sprites\sCursor</sprite>
+    <sprite>sprites\sBlood</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bMain</background>
@@ -40,6 +41,7 @@
     <object>objects\oShotgun</object>
     <object>objects\oPickupParent</object>
     <object>objects\oShotgunBullet</object>
+    <object>objects\oBlood</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rDefault</room>

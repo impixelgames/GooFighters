@@ -164,6 +164,12 @@ if (instance_exists(collidingEnemy) &amp;&amp; canBeHit == true) {
     health -= collidingEnemy.dmg;
     canBeHit = false;
     alarm[1] = room_speed / 2;
+    
+    for (var i = 0; i &lt; 8; i++) {
+        var bloodSplatter = instance_create(x, y, oBlood);
+        bloodSplatter.direction = random(360);
+        bloodSplatter.speed = random_range(200/room_speed, 400/room_speed);
+    }
 }
 
 if (health &lt; 0) {
