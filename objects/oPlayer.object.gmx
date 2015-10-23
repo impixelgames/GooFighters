@@ -148,9 +148,9 @@ if (mouse_check_button(mb_left) &amp;&amp; canFire == true) {
             audio_play_sound(aReloadSound, 1, false);
             // destroy pickup
             with lastPickUp {
-                //instance_destroy();
-                image_xscale = 0;
-                image_yscale = image_xscale;
+                instance_destroy();
+                //image_xscale = 0;
+                //image_yscale = image_xscale;
             }
         }
     }
