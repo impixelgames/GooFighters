@@ -75,7 +75,17 @@ count = 100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>newEnemy = instance_create(random(room_width), random(room_height), oExplodingEnemy);
+            <string>var spawnLoc = random_range(1, 3);
+var spawnEnemyX;
+var spawnEnemyY;
+    
+if (spawnLoc == 1) {
+    spawnEnemyX = 0;
+} else {
+    spawnEnemyX = room_width - 50;
+}
+
+newEnemy = instance_create(spawnEnemyX, random(room_height), oExplodingEnemy);
 newEnemy.health = 100;
 </string>
           </argument>
