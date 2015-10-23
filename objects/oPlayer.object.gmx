@@ -144,9 +144,8 @@ if (mouse_check_button(mb_left) &amp;&amp; canFire == true) {
     if (currentGun != oPistolBullet) {
         lastPickUp.ammo -= 1;
         if (lastPickUp.ammo &lt;= 0) {
-            // TODO: Play out of ammo sound
-            
             currentGun = oPistolBullet;
+            audio_play_sound(aReloadSound, 1, false);
             // destroy pickup
             with lastPickUp {
                 //instance_destroy();

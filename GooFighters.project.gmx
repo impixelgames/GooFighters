@@ -8,6 +8,7 @@
     <sound>sound\aPistolSound</sound>
     <sound>sound\aHitSound</sound>
     <sound>sound\aShotgunSound</sound>
+    <sound>sound\aReloadSound</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sPlayerMoving</sprite>

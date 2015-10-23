@@ -30,7 +30,7 @@ gunSpeed = room_speed;
 bulletSpeed = 700 / room_speed;
 dmg = 45;
 bulletKick = 500 / room_speed;
-fireSound = aPistolSound;
+fireSound = aShotgunSound;
 
 </string>
           </argument>
