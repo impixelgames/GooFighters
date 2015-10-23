@@ -84,13 +84,15 @@ if (instance_exists(incomingProjectile)) {
     // Play hitsound
     audio_play_sound(aHitSound, 1, false);
     
-    with (incomingProjectile) {
-        instance_destroy();
+    if (oPlayer.currentGun != oShotgunBullet){
+        with (incomingProjectile) {
+            instance_destroy();
+        }
     }
     
     if (health &lt; 0) {
         var numChunks = random_range(15, 20);
-        var bitSpeed = 700 / room_speed;
+        var bitSpeed = 500 / room_speed;
         
         for (var chunk = 0; chunk &lt; numChunks; chunk++) {
             var newChunk = instance_create(x, y, oExplodingEnemyChunk);
