@@ -149,7 +149,9 @@ if (mouse_check_button(mb_left) &amp;&amp; canFire == true) {
             currentGun = oPistolBullet;
             // destroy pickup
             with lastPickUp {
-                instance_destroy();
+                //instance_destroy();
+                image_xscale = 0;
+                image_yscale = image_xscale;
             }
         }
     }
