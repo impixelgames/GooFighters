@@ -91,6 +91,8 @@ if (instance_exists(incomingProjectile)) {
     }
     
     if (health &lt; 0) {
+        score += 10;
+        
         var numChunks = random_range(15, 20);
         var bitSpeed = 500 / room_speed;
         
