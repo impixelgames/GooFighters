@@ -147,7 +147,9 @@ count--;
           <argument>
             <kind>1</kind>
             <string>// Display score
-draw_text(view_xview[0] + 20, view_yview[0] + 20, "Score: " + string(score));
+draw_text(view_xview[view_current] + 20, 
+          view_yview[view_current] + 20, 
+          "Score: " + string(score));
 </string>
           </argument>
         </arguments>
