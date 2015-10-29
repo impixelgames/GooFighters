@@ -23,6 +23,7 @@
     <sprite>sprites\sCursor</sprite>
     <sprite>sprites\sBlood</sprite>
     <sprite>sprites\sArrow</sprite>
+    <sprite>sprites\sExplosionShard</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bMain</background>
@@ -55,6 +56,7 @@
     <object>objects\oExplosiveBullet</object>
     <object>objects\oBlood</object>
     <object>objects\oMenu</object>
+    <object>objects\oExplosionShard</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rMenu</room>

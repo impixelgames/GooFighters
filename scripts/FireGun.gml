@@ -32,16 +32,14 @@ if (gunType == oShotgunBullet) {
 }
 
 // Explosive Launcher
-if (gunType == oExplosiveLauncher) {
-    var explosiveAngle = image_angle - 20;
-    for (var i = 0; i < 20; i++) {
-        myBullet = instance_create(x + 50, y + 50, gunType);
-        audio_play_sound(gunType.fireSound, 1, false);
-        myBullet.direction = explosiveAngle;
-        myBullet.speed = gunType.bulletSpeed;
-        myBullet.image_angle = image_angle;
-        explosiveAngle += 5;
-    }
+if (gunType == oExplosiveBullet) {
+    // spawn bullet
+    myBullet = instance_create(x, y, gunType);
+    // play sound after spawning bullet so the sound exists (in create function)
+    audio_play_sound(gunType.fireSound, 1, false);
+    myBullet.direction = image_angle;
+    myBullet.speed = gunType.bulletSpeed;
+    myBullet.image_angle = image_angle;
 }
 
 // gun recoil/kick
