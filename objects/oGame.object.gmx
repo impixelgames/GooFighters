@@ -150,6 +150,9 @@ count--;
 draw_text(view_xview[view_current] + 20, 
           view_yview[view_current] + 20, 
           "Score: " + string(score));
+          
+draw_set_font(fScore);
+draw_set_color(c_black);
 </string>
           </argument>
         </arguments>

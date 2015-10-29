@@ -36,6 +36,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fOptions</font>
+    <font>fonts\fScore</font>
   </fonts>
   <objects name="objects">
     <object>objects\oGame</object>
