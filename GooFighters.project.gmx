@@ -17,7 +17,9 @@
     <sprite>sprites\sEnemy</sprite>
     <sprite>sprites\sExplodingEnemyChunk</sprite>
     <sprite>sprites\sShotgun</sprite>
+    <sprite>sprites\sExplosiveLauncher</sprite>
     <sprite>sprites\sShotgunBullet</sprite>
+    <sprite>sprites\sExplosiveBullet</sprite>
     <sprite>sprites\sCursor</sprite>
     <sprite>sprites\sBlood</sprite>
     <sprite>sprites\sArrow</sprite>
@@ -47,8 +49,10 @@
     <object>objects\oExplodingEnemy</object>
     <object>objects\oExplodingEnemyChunk</object>
     <object>objects\oShotgun</object>
+    <object>objects\oExplosiveLauncher</object>
     <object>objects\oPickupParent</object>
     <object>objects\oShotgunBullet</object>
+    <object>objects\oExplosiveBullet</object>
     <object>objects\oBlood</object>
     <object>objects\oMenu</object>
   </objects>
