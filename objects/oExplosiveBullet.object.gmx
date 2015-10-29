@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>gunSpeed = room_speed;
-bulletSpeed = 900 / room_speed;
+bulletSpeed = 800 / room_speed;
 dmg = 45;
 bulletKick = 700 / room_speed;
 fireSound = aPistolSound;
@@ -53,14 +53,30 @@ fireSound = aPistolSound;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Slight deceleration
+            <string>/*
+var possibleEnemy = instance_place(x, y, oEnemyParent);
+
+if (instance_exists(possibleEnemy)) {
+    var currentImgAngle = image_angle;
+    var explosionAngle = image_angle - 15;
+    instance_destroy();
+    for (var i = 0; i &lt; 35; i++) {
+        myBullet = instance_create(x, y, oExplosionShard);
+        myBullet.direction = explosionAngle;
+        myBullet.speed = oExplosionShard.bulletSpeed;
+        myBullet.image_angle = currentImgAngle;
+        explosionAngle += 25;
+    }
+}
+*/
+// Slight deceleration
 if (speed &gt; 1) {
     speed -= 15 / room_speed;
 } else {
     var currentImgAngle = image_angle;
     var explosionAngle = image_angle - 15;
     instance_destroy();
-    for (var i = 0; i &lt; 45; i++) {
+    for (var i = 0; i &lt; 35; i++) {
         myBullet = instance_create(x, y, oExplosionShard);
         myBullet.direction = explosionAngle;
         myBullet.speed = oExplosionShard.bulletSpeed;
