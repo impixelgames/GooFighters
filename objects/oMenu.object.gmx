@@ -96,11 +96,15 @@ draw_set_valign(fa_middle);
 draw_set_font(fOptions);
 draw_set_color(c_white);
 
+draw_text((room_width/2) - 135, 50, "Goo Fighters");
+
 for (var m = 0; m &lt; array_length_1d(menu); m++) {
     draw_text(x + space, y + (m * space), string(menu[m]));
 }
 
 draw_sprite(sprite_index, 0, x + 16, y + (mPos * space));
+
+draw_text((room_width/2) - 185, room_height - 75, "by impixel Games");
 </string>
           </argument>
         </arguments>
