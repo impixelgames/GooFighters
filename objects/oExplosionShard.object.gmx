@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>gunSpeed = room_speed;
 bulletSpeed = 900 / room_speed;
-dmg = 45;
+dmg = 105;
 bulletKick = 700 / room_speed;
 fireSound = aPistolSound;
 </string>
@@ -52,7 +52,13 @@ fireSound = aPistolSound;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>// Slight deceleration
+if (speed &gt; 1) {
+    speed -= 35 / room_speed;
+} else {
+    instance_destroy();
+}
+</string>
           </argument>
         </arguments>
       </action>
