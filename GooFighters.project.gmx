@@ -24,6 +24,9 @@
     <sprite>sprites\sBlood</sprite>
     <sprite>sprites\sArrow</sprite>
     <sprite>sprites\sExplosionShard</sprite>
+    <sprite>sprites\sKingGoo</sprite>
+    <sprite>sprites\sSpikeGoo</sprite>
+    <sprite>sprites\sBabyGoo</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bMain</background>
@@ -47,6 +50,9 @@
     <object>objects\oPlayerProjectile</object>
     <object>objects\oPistolBullet</object>
     <object>objects\oEnemyParent</object>
+    <object>objects\oKingGoo</object>
+    <object>objects\oBabyGoo</object>
+    <object>objects\oSpikeGoo</object>
     <object>objects\oExplodingEnemy</object>
     <object>objects\oExplodingEnemyChunk</object>
     <object>objects\oShotgun</object>
