@@ -11,22 +11,34 @@
     <sound>sound\aReloadSound</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sPlayerMoving</sprite>
-    <sprite>sprites\sPlayerStill</sprite>
-    <sprite>sprites\sPistolBullet</sprite>
-    <sprite>sprites\sEnemy</sprite>
-    <sprite>sprites\sExplodingEnemyChunk</sprite>
-    <sprite>sprites\sShotgun</sprite>
-    <sprite>sprites\sExplosiveLauncher</sprite>
-    <sprite>sprites\sShotgunBullet</sprite>
-    <sprite>sprites\sExplosiveBullet</sprite>
-    <sprite>sprites\sCursor</sprite>
-    <sprite>sprites\sBlood</sprite>
-    <sprite>sprites\sArrow</sprite>
-    <sprite>sprites\sExplosionShard</sprite>
-    <sprite>sprites\sKingGoo</sprite>
-    <sprite>sprites\sSpikeGoo</sprite>
-    <sprite>sprites\sBabyGoo</sprite>
+    <sprites name="Player">
+      <sprite>sprites\sPlayerStill</sprite>
+      <sprite>sprites\sPlayerMoving</sprite>
+      <sprite>sprites\sBlood</sprite>
+    </sprites>
+    <sprites name="Enemies">
+      <sprite>sprites\sEnemy</sprite>
+      <sprite>sprites\sSpikeGoo</sprite>
+      <sprite>sprites\sKingGoo</sprite>
+      <sprites name="Gibs">
+        <sprite>sprites\sExplodingEnemyChunk</sprite>
+        <sprite>sprites\sExplosionShard</sprite>
+        <sprite>sprites\sBabyGoo</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Pickups">
+      <sprite>sprites\sExplosiveLauncher</sprite>
+      <sprite>sprites\sShotgun</sprite>
+    </sprites>
+    <sprites name="Bullets">
+      <sprite>sprites\sPistolBullet</sprite>
+      <sprite>sprites\sExplosiveBullet</sprite>
+      <sprite>sprites\sShotgunBullet</sprite>
+    </sprites>
+    <sprites name="Other">
+      <sprite>sprites\sCursor</sprite>
+      <sprite>sprites\sArrow</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bMain</background>
@@ -47,22 +59,30 @@
   <objects name="objects">
     <object>objects\oGame</object>
     <object>objects\oPlayer</object>
-    <object>objects\oPlayerProjectile</object>
-    <object>objects\oPistolBullet</object>
-    <object>objects\oEnemyParent</object>
-    <object>objects\oKingGoo</object>
-    <object>objects\oBabyGoo</object>
-    <object>objects\oSpikeGoo</object>
-    <object>objects\oExplodingEnemy</object>
-    <object>objects\oExplodingEnemyChunk</object>
-    <object>objects\oShotgun</object>
-    <object>objects\oExplosiveLauncher</object>
-    <object>objects\oPickupParent</object>
-    <object>objects\oShotgunBullet</object>
-    <object>objects\oExplosiveBullet</object>
     <object>objects\oBlood</object>
     <object>objects\oMenu</object>
-    <object>objects\oExplosionShard</object>
+    <objects name="Bullets">
+      <object>objects\oPistolBullet</object>
+      <object>objects\oShotgunBullet</object>
+      <object>objects\oExplosiveBullet</object>
+      <object>objects\oPlayerProjectile</object>
+    </objects>
+    <objects name="Enemies">
+      <objects name="Gibs">
+        <object>objects\oExplosionShard</object>
+        <object>objects\oExplodingEnemyChunk</object>
+        <object>objects\oBabyGoo</object>
+      </objects>
+      <object>objects\oSpikeGoo</object>
+      <object>objects\oExplodingEnemy</object>
+      <object>objects\oKingGoo</object>
+      <object>objects\oEnemyParent</object>
+    </objects>
+    <objects name="Pickups">
+      <object>objects\oShotgun</object>
+      <object>objects\oExplosiveLauncher</object>
+      <object>objects\oPickupParent</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rMenu</room>
