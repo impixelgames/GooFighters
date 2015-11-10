@@ -77,6 +77,7 @@
       <object>objects\oExplodingEnemy</object>
       <object>objects\oKingGoo</object>
       <object>objects\oEnemyParent</object>
+      <object>objects\oSpikeSpawn</object>
     </objects>
     <objects name="Pickups">
       <object>objects\oShotgun</object>

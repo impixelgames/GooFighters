@@ -52,7 +52,38 @@ window_set_cursor(cr_none);
 cursor_sprite = sCursor;
 
 // Spawning enemies count
-count = 100;
+explodingCount = 100;
+spikeCount = 200;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/*
+Spawn a Spikey Goo
+
+Location: spikeSpawn object in Default Room
+*/
+
+newEnemy = instance_create(oSpikeSpawn.x, oSpikeSpawn.y, oSpikeGoo);
+newEnemy.hp = 100;
 </string>
           </argument>
         </arguments>
@@ -75,7 +106,13 @@ count = 100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var spawnLoc = random_range(1, 3);
+            <string>/*
+Spawn an Exploding Goo
+
+Location: Random along left or right edges of Default Room
+*/
+
+var spawnLoc = random_range(1, 3);
 var spawnEnemyX;
 var spawnEnemyY;
     
@@ -86,7 +123,7 @@ if (spawnLoc == 1) {
 }
 
 newEnemy = instance_create(spawnEnemyX, random(room_height), oExplodingEnemy);
-newEnemy.health = 100;
+newEnemy.hp = 100;
 </string>
           </argument>
         </arguments>
@@ -119,11 +156,16 @@ if (keyboard_check_pressed(ord("R"))) {
     game_restart();
 }
 
-if (count &lt;= 0) {
-    count = 150;
+if (explodingCount &lt;= 0) {
+    explodingCount = 150;
     alarm[0] = 80;
 }
-count--;
+if (spikeCount &lt;= 0) {
+    spikeCount = 200;
+    alarm[1] = 80;
+}
+explodingCount--;
+spikeCount--;
 </string>
           </argument>
         </arguments>
