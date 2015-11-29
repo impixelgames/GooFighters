@@ -54,7 +54,7 @@ cursor_sprite = sCursor;
 // Spawning enemies count
 explodingCount = 100;
 spikeCount = 200;
-kingCount = 1200;
+kingCount = 2200;
 
 // Stop spawn of other enemies if king goo is alive
 kingAlive = false;
@@ -206,7 +206,7 @@ if (spikeCount &lt;= 0 &amp;&amp; !kingAlive) {
     alarm[1] = 80;
 }
 if (kingCount &lt;= 0 &amp;&amp; !kingAlive) {
-    kingCount = 2000;
+    kingCount = 2200;
     alarm[2] = 80;
 }
 explodingCount--;

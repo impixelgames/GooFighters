@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>// Pickup Box
 gunType = oShotgunBullet;
-ammo = 6;
-dropChance = 35;
+ammo = 10;
+dropChance = 15;
 </string>
           </argument>
         </arguments>
