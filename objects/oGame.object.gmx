@@ -54,6 +54,40 @@ cursor_sprite = sCursor;
 // Spawning enemies count
 explodingCount = 100;
 spikeCount = 200;
+kingCount = 1200;
+
+// Stop spawn of other enemies if king goo is alive
+kingAlive = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/*
+Spawn a king goo
+
+Stop all other spawns of other enemies
+*/
+
+var newKing = instance_create(oKingSpawn.x, oKingSpawn.y, oKingGoo);
+
 </string>
           </argument>
         </arguments>
@@ -83,7 +117,8 @@ Location: spikeSpawn object in Default Room
 */
 
 newEnemy = instance_create(oSpikeSpawn.x, oSpikeSpawn.y, oSpikeGoo);
-newEnemy.hp = 100;
+//newEnemy.hp = 100;
+
 </string>
           </argument>
         </arguments>
@@ -123,7 +158,7 @@ if (spawnLoc == 1) {
 }
 
 newEnemy = instance_create(spawnEnemyX, random(room_height), oExplodingEnemy);
-newEnemy.hp = 100;
+//newEnemy.hp = 100;
 </string>
           </argument>
         </arguments>
@@ -156,16 +191,27 @@ if (keyboard_check_pressed(ord("R"))) {
     game_restart();
 }
 
-if (explodingCount &lt;= 0) {
+if (instance_exists(oKingGoo)) {
+    kingAlive = true; 
+} else {
+    kingAlive = false;
+}
+
+if (explodingCount &lt;= 0 &amp;&amp; !kingAlive) {
     explodingCount = 150;
     alarm[0] = 80;
 }
-if (spikeCount &lt;= 0) {
+if (spikeCount &lt;= 0 &amp;&amp; !kingAlive) {
     spikeCount = 200;
     alarm[1] = 80;
 }
+if (kingCount &lt;= 0 &amp;&amp; !kingAlive) {
+    kingCount = 2000;
+    alarm[2] = 80;
+}
 explodingCount--;
 spikeCount--;
+if (!kingAlive) { kingCount--; }
 </string>
           </argument>
         </arguments>
