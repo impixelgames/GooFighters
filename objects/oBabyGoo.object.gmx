@@ -28,11 +28,78 @@
             <string>/*
 * Enemy moves in a random direction, bouces off walls
 */
-speed = 190 / room_speed;
-direction = random(360);
-dmg = 0;
-spawnCount = 5500 / room_speed; // prevent spawn kills
-isCollideCount = 0;
+speed = 290 / room_speed;
+//direction = random(360);
+dmg = 10;
+spawnCount = 1500 / room_speed; // prevent spawn kills
+isCollideCount = 0; // enemy to enemy collide
+hp = 50;
+changeDirCount = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// spawned by king goo
+// Movement
+image_angle = direction;
+// Randomly change direction every x frames
+if (changeDirCount &lt; 0) {
+    direction = random(360);
+    changeDirCount = 50;
+}
+changeDirCount--;
+
+// Reset size after damage taken
+if (image_xscale &lt; 1) {
+    image_xscale += 0.05;
+    image_yscale += 0.05;
+}
+
+// Collisions
+EnemyBoundaryCollide();
+EnemyWithEnemyCollision();
+
+var incomingProjectile = instance_place(x, y, oPlayerProjectile);
+
+// TODO: Implement Damage buffer
+if (instance_exists(incomingProjectile)) {
+    hp -= incomingProjectile.dmg;
+    // Show damage is taken
+    image_xscale = 0.65;
+    image_yscale = image_xscale;
+    
+    audio_play_sound(aHitSound, 1, false);
+    
+    if (instance_exists(oPlayer) &amp;&amp; oPlayer.currentGun != oShotgunBullet) {
+        with (incomingProjectile) {
+            instance_destroy();
+        }
+    }
+    
+    if (hp &lt; 0) {
+        score += 5;
+        //GeneratePickup(x, y);
+        instance_destroy();
+    }
+}
 </string>
           </argument>
         </arguments>

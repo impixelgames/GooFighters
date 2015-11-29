@@ -66,6 +66,7 @@ EnemyBoundaryCollide();
 
 var incomingProjectile = instance_place(x, y, oPlayerProjectile);
 
+// TODO: Implement Damage buffer
 if (instance_exists(incomingProjectile)) {
     hp -= incomingProjectile.dmg;
     
