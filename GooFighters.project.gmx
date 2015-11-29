@@ -24,6 +24,7 @@
         <sprite>sprites\sExplodingEnemyChunk</sprite>
         <sprite>sprites\sExplosionShard</sprite>
         <sprite>sprites\sBabyGoo</sprite>
+        <sprite>sprites\sBabyGib</sprite>
       </sprites>
     </sprites>
     <sprites name="Pickups">
@@ -74,6 +75,7 @@
         <object>objects\oExplosionShard</object>
         <object>objects\oExplodingEnemyChunk</object>
         <object>objects\oBabyGoo</object>
+        <object>objects\oBabyGib</object>
       </objects>
       <object>objects\oSpikeGoo</object>
       <object>objects\oExplodingEnemy</object>
