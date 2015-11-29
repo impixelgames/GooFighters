@@ -92,7 +92,7 @@ if (instance_exists(incomingProjectile)) {
         // Show damage is taken
         image_xscale = 0.65;
         image_yscale = image_xscale;    
-        dmgBuffer = 10;
+        dmgBuffer = 5;
         
             // generate some gibs
         for (var i = 0; i &lt; 6; i++) {
