@@ -32,7 +32,7 @@ speed = 35 / room_speed;
 direction = random(360);
 dmg = 150;
 spawnCount = 5500 / room_speed; // prevent spawn kills
-hp = 4000
+hp = 2500
 isCollideCount = 0;
 </string>
           </argument>

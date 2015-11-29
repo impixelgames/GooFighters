@@ -35,6 +35,9 @@ spawnCount = 1500 / room_speed; // prevent spawn kills
 isCollideCount = 0; // enemy to enemy collide
 hp = 50;
 changeDirCount = 0;
+
+// Damage buffer
+dmgBuffer = 0;
 </string>
           </argument>
         </arguments>
@@ -79,26 +82,32 @@ EnemyWithEnemyCollision();
 
 var incomingProjectile = instance_place(x, y, oPlayerProjectile);
 
-// TODO: Implement Damage buffer
+// Buffer to prevent instance goo death
+dmgBuffer--;
+
 if (instance_exists(incomingProjectile)) {
-    hp -= incomingProjectile.dmg;
-    // Show damage is taken
-    image_xscale = 0.65;
-    image_yscale = image_xscale;
-    
-    audio_play_sound(aHitSound, 1, false);
+    // Damage buffer
+    if (dmgBuffer &lt; 0) {
+        hp -= incomingProjectile.dmg;
+        // Show damage is taken
+        image_xscale = 0.65;
+        image_yscale = image_xscale;    
+        dmgBuffer = 10;
+        
+            // generate some gibs
+        for (var i = 0; i &lt; 6; i++) {
+            var babyGib = instance_create(x, y, oBabyGib);
+            babyGib.direction = random(360);
+        }
+        
+        audio_play_sound(aHitSound, 1, false);
+    }
     
     // remove projectile (unless shotty)
     if (instance_exists(oPlayer) &amp;&amp; oPlayer.currentGun != oShotgunBullet) {
         with (incomingProjectile) {
             instance_destroy();
         }
-    }
-    
-    // generate some gibs
-    for (var i = 0; i &lt; 6; i++) {
-        var babyGib = instance_create(x, y, oBabyGib);
-        babyGib.direction = random(360);
     }
     
     if (hp &lt; 0) {
