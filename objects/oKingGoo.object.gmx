@@ -30,9 +30,10 @@
 */
 speed = 35 / room_speed;
 direction = random(360);
-dmg = 0;
+dmg = 150;
 spawnCount = 5500 / room_speed; // prevent spawn kills
-hp = 1000
+hp = 4000
+isCollideCount = 0;
 </string>
           </argument>
         </arguments>
@@ -61,6 +62,7 @@ image_angle = direction;
 
 // Collisions
 EnemyBoundaryCollide();
+//EnemyWithEnemyCollision();
 
 var incomingProjectile = instance_place(x, y, oPlayerProjectile);
 
@@ -76,6 +78,7 @@ if (instance_exists(incomingProjectile)) {
     }
     
     // Generate a mini-goo
+    instance_create(x, y, oBabyGoo);
     
     if (hp &lt; 0) {
         score += 75;

@@ -30,6 +30,7 @@ speed = 280 / room_speed;
 direction = random(360);
 dmg = 0;
 spawnCount = 5500 / room_speed;
+isCollideCount = 0;
 </string>
           </argument>
         </arguments>
@@ -59,6 +60,7 @@ image_angle = direction;
 
 // Collisions
 EnemyBoundaryCollide();
+EnemyWithEnemyCollision();
 
 // Bullet
 var incomingProjectile = instance_place(x, y, oPlayerProjectile);
