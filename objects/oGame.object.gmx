@@ -26,12 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>/* Game Settings */
-window_set_fullscreen(false);
+//window_set_fullscreen(false);
+window_set_fullscreen(true);
 
-//var screenWidth = display_get_width();
-//var screenHeight = display_get_height();
-var screenWidth = 1080;
-var screenHeight = 720;
+var screenWidth = display_get_width();
+var screenHeight = display_get_height();
+//var screenWidth = 1080;
+//var screenHeight = 720;
 
 window_set_size(screenWidth, screenHeight);
 
