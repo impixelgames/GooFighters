@@ -90,6 +90,7 @@
       <object>objects\oExplosiveLauncher</object>
       <object>objects\oPickupParent</object>
     </objects>
+    <object>objects\oMenuGame</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rMenu</room>
