@@ -65,6 +65,7 @@
     <object>objects\oPlayer</object>
     <object>objects\oBlood</object>
     <object>objects\oMenu</object>
+    <object>objects\oMenuGame</object>
     <objects name="Bullets">
       <object>objects\oPistolBullet</object>
       <object>objects\oShotgunBullet</object>
@@ -90,7 +91,6 @@
       <object>objects\oExplosiveLauncher</object>
       <object>objects\oPickupParent</object>
     </objects>
-    <object>objects\oMenuGame</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rMenu</room>
