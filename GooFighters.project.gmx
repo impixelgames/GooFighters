@@ -39,6 +39,7 @@
     <sprites name="Other">
       <sprite>sprites\sCursor</sprite>
       <sprite>sprites\sArrow</sprite>
+      <sprite>sprites\sSpawnWarning</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -91,6 +92,7 @@
       <object>objects\oExplosiveLauncher</object>
       <object>objects\oPickupParent</object>
     </objects>
+    <object>objects\oSpawnWarning</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rMenu</room>
