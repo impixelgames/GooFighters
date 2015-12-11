@@ -93,6 +93,7 @@
       <object>objects\oPickupParent</object>
     </objects>
     <object>objects\oSpawnWarning</object>
+    <object>objects\effect_shake</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rMenu</room>

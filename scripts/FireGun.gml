@@ -43,6 +43,7 @@ if (gunType == oExplosiveBullet) {
 }
 
 // gun recoil/kick
-var kickDirection = image_angle + 180; // opposite to player dir
-x += lengthdir_x(gunType.bulletKick, kickDirection);
-y += lengthdir_y(gunType.bulletKick, kickDirection);    
+//var kickDirection = image_angle + 180; // opposite to player dir
+//x += lengthdir_x(gunType.bulletKick, kickDirection);
+//y += lengthdir_y(gunType.bulletKick, kickDirection);   
+instance_create(oPlayer.x, oPlayer.y, effect_shake); 
