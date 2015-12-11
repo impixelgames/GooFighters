@@ -73,12 +73,11 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//var mid_x = 1024 / 2;
-//var mid_y = 720 / 2;
-//view_xview = random_range(oPlayer.x - 2, oPlayer.x + 2) - mid_x;
-//view_yview = random_range(oPlayer.y - 2, oPlayer.y + 2) - mid_y;
-view_hview += random_range(-8, 8);
-view_wview += random_range(-8, 8);
+            <string>//view_hview += random_range(-8, 8);
+//view_wview += random_range(-8, 8);
+
+view_hview = 720 + random_range(-8, 8);
+view_wview = 1024 + random_range(-8, 8);
 </string>
           </argument>
         </arguments>
