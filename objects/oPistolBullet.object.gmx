@@ -27,10 +27,10 @@
             <kind>1</kind>
             <string>// Pistol Properties
 bulletSpeed = 800 / room_speed;
-dmg = 35;
-bulletKick = 300 / room_speed;
+dmg = 45;
+//bulletKick = 300 / room_speed;
 fireSound = aPistolSound;
-gunSpeed = room_speed / 2.5;
+gunSpeed = room_speed / 5;
 </string>
           </argument>
         </arguments>
