@@ -85,6 +85,7 @@
       <object>objects\oEnemyParent</object>
       <object>objects\oSpikeSpawn</object>
       <object>objects\oKingSpawn</object>
+      <object>objects\oCorpse</object>
     </objects>
     <objects name="Pickups">
       <object>objects\oShotgun</object>
