@@ -31,6 +31,31 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Reset screen
+view_xview = oPlayer.x - view_wview[0]/2
+view_yview = oPlayer.y - view_hview[0]/2;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -48,9 +73,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>view_hview = 720;
-view_wview = 1024;
-instance_destroy();
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -76,10 +99,10 @@ instance_destroy();
             <string>//view_hview += random_range(-8, 8);
 //view_wview += random_range(-8, 8);
 
-view_hview = 720 + random_range(-8, 8);
-view_wview = 1024 + random_range(-8, 8);
-//view_xview += lengthdir_x(6, point_direction(x, y, mouse_x, mouse_y) + 180);
-//view_yview += lengthdir_y(6, point_direction(x, y, mouse_x, mouse_y) + 180);
+//view_hview = 720 + random_range(-8, 8);
+//view_wview = 1024 + random_range(-8, 8);
+view_xview += lengthdir_x(6, point_direction(x, y, mouse_x, mouse_y) + 180);
+view_yview += lengthdir_y(6, point_direction(x, y, mouse_x, mouse_y) + 180);
 
 //BackCont.viewx2 += lengthdir_x(6,point_direction(x,y,mouse_x,mouse_y)+180)
 //BackCont.viewy2 += lengthdir_y(6,point_direction(x,y,mouse_x,mouse_y)+180)

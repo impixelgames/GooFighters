@@ -48,4 +48,4 @@ if (gunType == oExplosiveBullet) {
 //y += lengthdir_y(gunType.bulletKick, kickDirection);   
 
 // Screen shake
-//instance_create(oPlayer.x, oPlayer.y, effect_shake); 
+instance_create(oPlayer.x, oPlayer.y, effect_shake); 

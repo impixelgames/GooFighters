@@ -40,6 +40,7 @@
       <sprite>sprites\sCursor</sprite>
       <sprite>sprites\sArrow</sprite>
       <sprite>sprites\sSpawnWarning</sprite>
+      <sprite>sprites\sBoundary</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -94,6 +95,9 @@
     </objects>
     <object>objects\oSpawnWarning</object>
     <object>objects\effect_shake</object>
+    <objects name="Other">
+      <object>objects\oBoundary</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rMenu</room>
