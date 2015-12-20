@@ -55,7 +55,6 @@
     <script>scripts\GeneratePickup.gml</script>
     <script>scripts\ExecuteMenuOption.gml</script>
     <script>scripts\EnemyWithEnemyCollision.gml</script>
-    <script>scripts\script6.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fOptions</font>
