@@ -63,14 +63,14 @@ if (image_xscale &lt; 1) {
     image_yscale += 0.05;
 }
 
-// Collisions
-EnemyBoundaryCollide();
-EnemyWithEnemyCollision();
-
 // AI
 if (instance_exists(oPlayer)) {
     move_towards_point(oPlayer.x, oPlayer.y, speed);
 }
+
+// Collisions
+EnemyBoundaryCollide();
+EnemyWithEnemyCollision();
 
 // Bullet
 var incomingProjectile = instance_place(x, y, oPlayerProjectile);
@@ -94,6 +94,32 @@ if (instance_exists(incomingProjectile)) {
         instance_destroy();
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="oSpikeGoo">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Prevent overlap
+var dir = point_direction(other.x, other.y, x, y);
+x += lengthdir_x(1, dir);
+y += lengthdir_x(1, dir);
 </string>
           </argument>
         </arguments>
