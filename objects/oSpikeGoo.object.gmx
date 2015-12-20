@@ -26,9 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>hp = 100;
-speed = 280 / room_speed;
+speed = 240 / room_speed;
 direction = random(360);
-dmg = 0;
+dmg = 45;
 spawnCount = 5500 / room_speed;
 isCollideCount = 0;
 </string>
@@ -57,16 +57,28 @@ isCollideCount = 0;
 // Movement
 image_angle = direction;
 
+// Reset image size
+if (image_xscale &lt; 1) {
+    image_xscale += 0.05;
+    image_yscale += 0.05;
+}
 
 // Collisions
 EnemyBoundaryCollide();
 EnemyWithEnemyCollision();
+
+// AI
+if (instance_exists(oPlayer)) {
+    move_towards_point(oPlayer.x, oPlayer.y, speed);
+}
 
 // Bullet
 var incomingProjectile = instance_place(x, y, oPlayerProjectile);
 
 if (instance_exists(incomingProjectile)) {
     hp -= incomingProjectile.dmg;
+    image_xscale = 0.65;
+    image_yscale = image_xscale;
     
     audio_play_sound(aHitSound, 1, false);
     

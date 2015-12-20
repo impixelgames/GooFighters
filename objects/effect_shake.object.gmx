@@ -78,6 +78,12 @@ instance_destroy();
 
 view_hview = 720 + random_range(-8, 8);
 view_wview = 1024 + random_range(-8, 8);
+//view_xview += lengthdir_x(6, point_direction(x, y, mouse_x, mouse_y) + 180);
+//view_yview += lengthdir_y(6, point_direction(x, y, mouse_x, mouse_y) + 180);
+
+//BackCont.viewx2 += lengthdir_x(6,point_direction(x,y,mouse_x,mouse_y)+180)
+//BackCont.viewy2 += lengthdir_y(6,point_direction(x,y,mouse_x,mouse_y)+180)
+
 </string>
           </argument>
         </arguments>

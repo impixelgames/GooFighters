@@ -57,6 +57,8 @@ isCollideCount = 0;
           <argument>
             <kind>1</kind>
             <string>image_angle = direction;
+
+// Reset image size
 if (image_xscale &lt; 1) {
     image_xscale += 0.05;
     image_yscale += 0.05;
