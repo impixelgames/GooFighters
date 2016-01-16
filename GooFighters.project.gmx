@@ -81,6 +81,7 @@
         <object>objects\oExplodingEnemyChunk</object>
         <object>objects\oBabyGoo</object>
         <object>objects\oBabyGib</object>
+        <object>objects\oPurpleGib</object>
       </objects>
       <object>objects\oSpikeGoo</object>
       <object>objects\oExplodingEnemy</object>
