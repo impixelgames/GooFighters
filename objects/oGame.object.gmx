@@ -234,11 +234,12 @@ if (spikeCount &lt;= 0 &amp;&amp; !kingAlive) {
     alarm[1] = 80;
 }
 if (kingCount &lt;= 0 &amp;&amp; !kingAlive) {
+    var spawnWarning = instance_create(oKingSpawn.x, oKingSpawn.y, oSpawnWarning);
     kingCount = 2800;
     alarm[2] = 80;
 }
 if (purpleCount &lt;= 0 &amp;&amp; !kingAlive) {
-    // spawn purple
+    var spawnWarning = instance_create(oPurpleSpawn.x, oPurpleSpawn.y, oSpawnWarning);
     purpleCount = 500;
     alarm[3] = 80;
 }
