@@ -85,7 +85,7 @@ shootTimer--;
 
 // Collisions
 EnemyBoundaryCollide();
-EnemyWithEnemyCollision();
+//EnemyWithEnemyCollision();
 
 // Watch for bullets
 var incomingProjectile = instance_place(x, y, oPlayerProjectile);

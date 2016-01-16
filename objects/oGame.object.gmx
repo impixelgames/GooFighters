@@ -226,20 +226,20 @@ if (instance_exists(oKingGoo)) {
 }
 
 if (explodingCount &lt;= 0 &amp;&amp; !kingAlive) {
-    explodingCount = 150;
+    explodingCount = 250;
     alarm[0] = 80;
 }
 if (spikeCount &lt;= 0 &amp;&amp; !kingAlive) {
-    spikeCount = 200;
+    spikeCount = 450;
     alarm[1] = 80;
 }
 if (kingCount &lt;= 0 &amp;&amp; !kingAlive) {
-    kingCount = 2200;
+    kingCount = 2800;
     alarm[2] = 80;
 }
 if (purpleCount &lt;= 0 &amp;&amp; !kingAlive) {
     // spawn purple
-    purpleCount = 400;
+    purpleCount = 500;
     alarm[3] = 80;
 }
 
