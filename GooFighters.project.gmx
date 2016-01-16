@@ -25,7 +25,9 @@
         <sprite>sprites\sExplosionShard</sprite>
         <sprite>sprites\sBabyGoo</sprite>
         <sprite>sprites\sBabyGib</sprite>
+        <sprite>sprites\sPurpleGib</sprite>
       </sprites>
+      <sprite>sprites\sPurpleGoo</sprite>
     </sprites>
     <sprites name="Pickups">
       <sprite>sprites\sExplosiveLauncher</sprite>
@@ -87,6 +89,8 @@
       <object>objects\oSpikeSpawn</object>
       <object>objects\oKingSpawn</object>
       <object>objects\oCorpse</object>
+      <object>objects\oPurpleGoo</object>
+      <object>objects\oPurpleSpawn</object>
     </objects>
     <objects name="Pickups">
       <object>objects\oShotgun</object>

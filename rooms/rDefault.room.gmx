@@ -59,6 +59,7 @@
     <instance objName="oSpikeSpawn" x="1472" y="224" name="inst_20AAE086" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oShotgun" x="768" y="960" name="inst_5F27F73B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oKingSpawn" x="1024" y="1088" name="inst_B44AC3E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPurpleSpawn" x="1440" y="1440" name="inst_F87D1AE8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bTileSet" x="0" y="0" w="128" h="128" xo="0" yo="0" id="10000001" name="inst_98D848D3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
