@@ -93,6 +93,7 @@
       <object>objects\oCorpse</object>
       <object>objects\oPurpleGoo</object>
       <object>objects\oPurpleSpawn</object>
+      <object>objects\oSpikeSpawn2</object>
     </objects>
     <objects name="Pickups">
       <object>objects\oShotgun</object>
