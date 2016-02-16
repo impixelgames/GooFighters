@@ -3,12 +3,12 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,35 +25,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>health = 100;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="1" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//with instance_create(x,y,oCorpse)
-//{
-    //sprite_index = other.spr_dead
-    //image_xscale = other.right
-//}
-instance_create(x, y, oCorpse);
+            <string>/// Draw Game Over Screen
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+
+draw_set_color(c_dkgray);
+draw_set_alpha(0.5);
+draw_rectangle(view_xview[0] + view_wview / 4, view_yview[0] + view_hview / 4, 
+  view_xview[0] + (view_wview * 3)/4, view_yview[0] + (view_hview * 3)/4, false);
+
+
+// Draw text
+draw_set_alpha(1);
+draw_set_color(c_white);
+draw_set_font(fGameOver);
+draw_text(view_xview[0] + view_wview/2, view_yview[0] + view_hview/2 - 50, "Game Over");
+draw_set_font(fRestart);
+draw_text(view_xview[0] + view_wview/2, view_yview[0] + view_hview/2, "Press 'R' To Restart, or ESC to quit");
 </string>
           </argument>
         </arguments>

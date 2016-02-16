@@ -63,6 +63,8 @@
   <fonts name="fonts">
     <font>fonts\fOptions</font>
     <font>fonts\fScore</font>
+    <font>fonts\fGameOver</font>
+    <font>fonts\fRestart</font>
   </fonts>
   <objects name="objects">
     <object>objects\oGame</object>
@@ -104,6 +106,7 @@
     <object>objects\effect_shake</object>
     <objects name="Other">
       <object>objects\oBoundary</object>
+      <object>objects\oGameOver</object>
     </objects>
   </objects>
   <rooms name="rooms">
