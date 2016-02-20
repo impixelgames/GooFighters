@@ -39,6 +39,7 @@ currentGun = oPistolBullet;
 lastPickUp = oShotgun;
 
 gooDamage = 0;
+showGooWarning = false
 </string>
           </argument>
         </arguments>
@@ -270,6 +271,11 @@ if (instance_place(x, y, oCorpse)) {
 }
 
 // Max goo level -- destroy player
+if (gooDamage &gt;= 70) {
+    showGooWarning = true;
+} else {
+    showGooWarning = false;
+}
 if (gooDamage &gt;= 100) {
     instance_destroy();
 }

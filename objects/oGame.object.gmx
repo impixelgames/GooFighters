@@ -288,9 +288,16 @@ if (instance_exists(oPlayer)) {
     draw_text(view_xview[view_current] + 160, 
               view_yview[view_current] + 20, 
               "Health: " + string(oPlayer.health));        
-    draw_text(view_xview[view_current] + 320,
-              view_yview[view_current] + 20,
-              "Goo Level: " + string(oPlayer.gooDamage));
+    
+    if (!oPlayer.showGooWarning) {
+        draw_text(view_xview[view_current] + 320,
+                  view_yview[view_current] + 20,
+                  "Goo Level: " + string(oPlayer.gooDamage));
+    } else {
+        draw_text(view_xview[view_current] + 320,
+                  view_yview[view_current] + 20,
+                  "Goo Level: " + string(oPlayer.gooDamage) + " !!!!!");
+    }
 } else {
     draw_text(view_xview[view_current] + 160, 
               view_yview[view_current] + 20, 
