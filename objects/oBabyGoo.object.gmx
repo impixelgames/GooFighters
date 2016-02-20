@@ -94,7 +94,7 @@ if (instance_exists(incomingProjectile)) {
         image_yscale = image_xscale;    
         dmgBuffer = 5;
         
-            // generate some gibs
+        // generate some gibs
         for (var i = 0; i &lt; 6; i++) {
             var babyGib = instance_create(x, y, oBabyGib);
             babyGib.direction = random(360);

@@ -80,6 +80,12 @@ if (instance_exists(incomingProjectile)) {
     image_xscale = 0.65;
     image_yscale = image_xscale;
     
+    // generate some gibs
+    for (var i = 0; i &lt; 6; i++) {
+        var babyGib = instance_create(x, y, oBabyGib);
+        babyGib.direction = random(360);
+    }
+    
     audio_play_sound(aHitSound, 1, false);
     
     if (instance_exists(oPlayer) &amp;&amp; oPlayer.currentGun != oShotgunBullet) {
