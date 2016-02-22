@@ -34,6 +34,8 @@ direction = random(360);
 dmg = 0;
 spawnCount = 5500 / room_speed; // prevent spawn kills
 isCollideCount = 0;
+
+spr_dead = sDefaultGib;
 </string>
           </argument>
         </arguments>

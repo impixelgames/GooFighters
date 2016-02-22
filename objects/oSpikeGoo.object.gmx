@@ -31,6 +31,7 @@ direction = random(360);
 dmg = 45;
 spawnCount = 5500 / room_speed;
 isCollideCount = 0;
+spr_dead = sBluePuddle;
 </string>
           </argument>
         </arguments>
@@ -83,6 +84,7 @@ if (instance_exists(incomingProjectile)) {
     // generate some gibs
     for (var i = 0; i &lt; 6; i++) {
         var babyGib = instance_create(x, y, oBabyGib);
+        babyGib.sprite_index = sBluePuddle;
         babyGib.direction = random(360);
     }
     

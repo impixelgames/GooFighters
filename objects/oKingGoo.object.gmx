@@ -35,6 +35,7 @@ spawnCount = 5500 / room_speed; // prevent spawn kills
 hp = 2500
 isCollideCount = 0;
 
+spr_dead = sGreenPuddle;
 </string>
           </argument>
         </arguments>

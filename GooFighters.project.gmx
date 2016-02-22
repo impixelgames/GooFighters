@@ -27,6 +27,9 @@
         <sprite>sprites\sBabyGib</sprite>
         <sprite>sprites\sPurpleGib</sprite>
         <sprite>sprites\sDefaultGib</sprite>
+        <sprite>sprites\sBluePuddle</sprite>
+        <sprite>sprites\sPurplePuddle</sprite>
+        <sprite>sprites\sGreenPuddle</sprite>
       </sprites>
       <sprite>sprites\sPurpleGoo</sprite>
     </sprites>

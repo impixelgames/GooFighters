@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>aliveTime = 100;
 dmg = 40;
+
+spr_dead = sPurplePuddle;
 </string>
           </argument>
         </arguments>

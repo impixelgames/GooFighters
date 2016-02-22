@@ -38,6 +38,8 @@ changeDirCount = 0;
 
 // Damage buffer
 dmgBuffer = 0;
+
+spr_dead = sGreenPuddle;
 </string>
           </argument>
         </arguments>

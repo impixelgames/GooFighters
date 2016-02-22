@@ -25,8 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>gibLife = 20;
+            <string>dmg = 0;
+gibLife = 20;
 speed = 200/room_speed;
+
+spr_dead = sGreenPuddle;
 </string>
           </argument>
         </arguments>

@@ -32,6 +32,8 @@ dmg = 75;
 spawnCount = 3500 / room_speed;
 isCollideCount = 0;
 shootTimer = 100;
+
+spr_dead = sPurplePuddle;
 </string>
           </argument>
         </arguments>
@@ -94,6 +96,7 @@ if (instance_exists(incomingProjectile)) {
     // generate some gibs
     for (var i = 0; i &lt; 6; i++) {
         var babyGib = instance_create(x, y, oBabyGib);
+        babyGib.sprite_index = sPurplePuddle;
         babyGib.direction = random(360);
     }
     

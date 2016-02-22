@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>health = 100;
+
+spr_dead = sDefaultGib;
 </string>
           </argument>
         </arguments>
@@ -53,7 +55,12 @@
     //sprite_index = other.spr_dead
     //image_xscale = other.right
 //}
-instance_create(x, y, oCorpse);
+//instance_create(x, y, oCorpse);
+
+with instance_create(x, y, oCorpse)
+{
+    sprite_index = other.spr_dead;
+}
 </string>
           </argument>
         </arguments>
