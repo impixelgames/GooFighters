@@ -62,7 +62,11 @@ showGooWarning = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(0, 0, oGameOver);
+            <string>if (gooDamage &gt;= 99) {
+    instance_create(0, 0, oGameOverGoo);
+} else {
+    instance_create(0, 0, oGameOver);
+}
 </string>
           </argument>
         </arguments>

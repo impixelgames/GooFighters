@@ -110,6 +110,7 @@
     <objects name="Other">
       <object>objects\oBoundary</object>
       <object>objects\oGameOver</object>
+      <object>objects\oGameOverGoo</object>
     </objects>
   </objects>
   <rooms name="rooms">
